@@ -14,6 +14,6 @@ contract Challenge5{
     function PayRelease () public
     {
         require(block.timestamp >= PayTime);
-        address(PayReciver).transfer(address(this).balance);
+        PayReciver.transfer(address(this).balance);
     }
 }
